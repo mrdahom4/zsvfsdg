@@ -47,7 +47,7 @@ client.on('message',async message => {
   fs.writeFile(path, JSON.stringify(credits, null, 5), function(err) {if(err) console.log(err)});
  
  
-  if(message.content.startsWith(prefix + "credit")) {
+  if(message.content.startsWith("#credit")) {
   if(args[0] !== `${prefix}credit` && args[0] !== `${prefix}credits`) return;
  
   if(args[2]) {
@@ -83,7 +83,7 @@ client.on('message',async message => {
   }
  
   }
-  if(message.content.startsWith(prefix + "daily")) {
+  if(message.content.startsWith("#daily")) {
     if(cool.includes(message.author.id)) return message.channel.send(`**:heavy_dollar_sign: | \ , يجب عليك انتظار  يوم لأخذ المبلغ مرة اخرى**`);
     if(mentionn) {
       var one = Math.floor(Math.random() * 9) + 1;
